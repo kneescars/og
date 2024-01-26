@@ -1,18 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
-import queryString from 'query-string';
 import * as React from 'react';
+
 import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 
-import { deploymentURL } from '@/libs/env';
-
 import Button from '@/components/buttons/Button';
-import Input from '@/components/forms/Input';
-import SelectInput from '@/components/forms/SelectInput';
 import ButtonLink from '@/components/links/ButtonLink';
 import CustomLink from '@/components/links/CustomLink';
-import Seo from '@/components/Seo';
-
 import { GeneralQueryEnum } from '@/pages/api/default';
+import Input from '@/components/forms/Input';
+import SelectInput from '@/components/forms/SelectInput';
+import Seo from '@/components/Seo';
+import { deploymentURL } from '@/libs/env';
+/* eslint-disable @next/next/no-img-element */
+import queryString from 'query-string';
 
 type Query = Record<keyof typeof GeneralQueryEnum | 'ogType', string>;
 
@@ -96,12 +95,12 @@ export default function BuildPage() {
                     <Input
                       id='background'
                       label='Background Image'
-                      helperText={`default: ${deploymentURL}/images/background.jpg`}
+                      helperText={`default: ${deploymentURL}images/background.jpg`}
                     />
                     <Input
                       id='logo'
                       label='Logo Image'
-                      helperText={`default: ${deploymentURL}/favicon.png`}
+                      helperText={`default: ${deploymentURL}favicon.png`}
                     />
                     <Input id='siteName' label='siteName' />
                     <Input id='description' label='description' />

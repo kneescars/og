@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
-
 import { deploymentURL } from '@/libs/env';
 
 export const config = {
@@ -32,10 +31,10 @@ export default async function handler(req: NextRequest) {
 
     // ?background=<background>
     const background = searchParams.get('background')
-    const defaultBackground = `${deploymentURL}/images/background.jpg`
+    const defaultBackground = `${deploymentURL}images/background.jpg`
     // ?logo=<logo>
     const logo = searchParams.get('logo')
-    const defaultLogo = `${deploymentURL}/favicon.png`
+    const defaultLogo = `${deploymentURL}favicon.png`
 
     // ?siteName=<siteName>
     const siteName = searchParams.has('siteName')
